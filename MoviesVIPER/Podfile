@@ -5,6 +5,7 @@ target 'MoviesVIPER' do
   use_frameworks!
 
 	pod 'Alamofire'
+    pod 'Gloss'
 
   target 'MoviesVIPERTests' do
     inherit! :search_paths

@@ -18,7 +18,6 @@ enum Endpoint {
     case nowPlayingMovies
     case topRatedMovies
     case upcomingMovies
-    case latestMovies
     case movie(id: String)
     case movieImages(id: String)
     case movieVideos(id: String)
@@ -33,8 +32,8 @@ enum Endpoint {
 extension Endpoint {
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .popularMovies, .nowPlayingMovies, .topRatedMovies, .upcomingMovies, .latestMovies, .movie,
-             .movieImages, .movieVideos, .similarMovies, .movieReviews, .moviesGenres, .genreMovies, .movieSearch:
+        case .popularMovies, .nowPlayingMovies, .topRatedMovies, .upcomingMovies, .movie, .movieImages,
+             .movieVideos, .similarMovies, .movieReviews, .moviesGenres, .genreMovies, .movieSearch:
             return .get
         }
     }
@@ -52,8 +51,6 @@ extension Endpoint {
             return baseURL + "/movie/top_rated"
         case .upcomingMovies:
             return baseURL + "/movie/upcoming"
-        case .latestMovies:
-            return baseURL + "/movie/latest"
         case let .movie(id: id):
             return baseURL + "/movie/" + id
         case let .movieImages(id: id):
@@ -78,7 +75,7 @@ extension Endpoint {
 extension Endpoint {
     var parameters: [String : String] {
         switch self {
-        case .popularMovies, .nowPlayingMovies, .topRatedMovies, .upcomingMovies, .latestMovies, .movie, 
+        case .popularMovies, .nowPlayingMovies, .topRatedMovies, .upcomingMovies, .movie, 
              .movieImages, .movieVideos, .similarMovies, .movieReviews, .moviesGenres, .genreMovies:
             return ["api_key": apiKey]
         case let .movieSearch(query: q):

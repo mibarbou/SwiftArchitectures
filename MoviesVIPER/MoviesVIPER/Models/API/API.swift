@@ -85,14 +85,6 @@ extension API {
         }
     }
     
-    public static func latestMovies(success: @escaping ([String : Any])->(), fail: @escaping (ApiError)->()) {
-        self.request(endpoint: .latestMovies, success: { (movies) in
-            
-        }) { (error) in
-            print(error)
-        }
-    }
-    
     public static func movie(id: String,
                              success: @escaping ([String : Any])->(),
                              fail: @escaping (ApiError)->()) {
