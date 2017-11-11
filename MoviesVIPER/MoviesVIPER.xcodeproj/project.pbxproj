@@ -10,7 +10,7 @@
 		4772DDCC7FECD37DD5C248B7 /* Pods_MoviesVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DD4E9245C362AAD6FBE031 /* Pods_MoviesVIPER.framework */; };
 		95511672827DE4BCE34500B3 /* Pods_MoviesVIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9455E4E4624F05C4EFFDE7 /* Pods_MoviesVIPERTests.framework */; };
 		D01CE5261FB76FEF00D40D33 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D01CE5251FB76FEF00D40D33 /* Podfile */; };
-		D01CE52A1FB7712000D40D33 /* MoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CE5291FB7712000D40D33 /* MoviesAPI.swift */; };
+		D01CE52A1FB7712000D40D33 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CE5291FB7712000D40D33 /* API.swift */; };
 		D01CE52C1FB7718B00D40D33 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CE52B1FB7718B00D40D33 /* Endpoint.swift */; };
 		D01CE52F1FB7775000D40D33 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01CE52E1FB7775000D40D33 /* APIError.swift */; };
 		D092BBE11FB76DAD00ABE6B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092BBE01FB76DAD00ABE6B6 /* AppDelegate.swift */; };
@@ -37,7 +37,7 @@
 		9C9455E4E4624F05C4EFFDE7 /* Pods_MoviesVIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesVIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DD4E9245C362AAD6FBE031 /* Pods_MoviesVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01CE5251FB76FEF00D40D33 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D01CE5291FB7712000D40D33 /* MoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAPI.swift; sourceTree = "<group>"; };
+		D01CE5291FB7712000D40D33 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D01CE52B1FB7718B00D40D33 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D01CE52E1FB7775000D40D33 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		D092BBDD1FB76DAD00ABE6B6 /* MoviesVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +105,7 @@
 		D01CE5281FB770DC00D40D33 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D01CE5291FB7712000D40D33 /* MoviesAPI.swift */,
+				D01CE5291FB7712000D40D33 /* API.swift */,
 				D01CE52B1FB7718B00D40D33 /* Endpoint.swift */,
 				D01CE52E1FB7775000D40D33 /* APIError.swift */,
 			);
@@ -372,7 +372,7 @@
 				D092BBE11FB76DAD00ABE6B6 /* AppDelegate.swift in Sources */,
 				D01CE52C1FB7718B00D40D33 /* Endpoint.swift in Sources */,
 				D01CE52F1FB7775000D40D33 /* APIError.swift in Sources */,
-				D01CE52A1FB7712000D40D33 /* MoviesAPI.swift in Sources */,
+				D01CE52A1FB7712000D40D33 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

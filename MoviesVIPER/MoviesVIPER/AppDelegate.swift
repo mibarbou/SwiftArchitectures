@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         // Override point for customization after application launch.
         
-        MoviesAPI.movie(id: "550", success: { (movie) in
+        API.movieSearch(query: "batman", success: { (_) in
             
-        }) { (error) in
+        }) { (_) in
             
         }
         
