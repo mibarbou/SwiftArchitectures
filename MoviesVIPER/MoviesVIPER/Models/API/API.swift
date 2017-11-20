@@ -53,33 +53,49 @@ class API {
 
 extension API {
     
-    public static func popularMovies(success: @escaping ([String : Any])->(), fail: @escaping (ApiError)->()) {
-        self.request(endpoint: .popularMovies, success: { (movies) in
-            
+    public static func popularMovies(success: @escaping (MoviesResponse)->(), fail: @escaping (ApiError)->()) {
+        self.request(endpoint: .popularMovies, success: { (response) in
+			if let movies = MoviesResponse(json: response) {
+				success(movies)
+			} else {
+				fail(.parserError)
+			}
         }) { (error) in
             print(error)
         }
     }
     
-    public static func nowPlayingMovies(success: @escaping ([String : Any])->(), fail: @escaping (ApiError)->()) {
-        self.request(endpoint: .nowPlayingMovies, success: { (movies) in
-            
+    public static func nowPlayingMovies(success: @escaping (MoviesResponse)->(), fail: @escaping (ApiError)->()) {
+        self.request(endpoint: .nowPlayingMovies, success: { (response) in
+			if let movies = MoviesResponse(json: response) {
+				success(movies)
+			} else {
+				fail(.parserError)
+			}
         }) { (error) in
             print(error)
         }
     }
     
-    public static func topRatedMovies(success: @escaping ([String : Any])->(), fail: @escaping (ApiError)->()) {
-        self.request(endpoint: .topRatedMovies, success: { (movies) in
-            
+    public static func topRatedMovies(success: @escaping (MoviesResponse)->(), fail: @escaping (ApiError)->()) {
+        self.request(endpoint: .topRatedMovies, success: { (response) in
+			if let movies = MoviesResponse(json: response) {
+				success(movies)
+			} else {
+				fail(.parserError)
+			}
         }) { (error) in
             print(error)
         }
     }
     
-    public static func upcomingMovies(success: @escaping ([String : Any])->(), fail: @escaping (ApiError)->()) {
-        self.request(endpoint: .upcomingMovies, success: { (movies) in
-            
+    public static func upcomingMovies(success: @escaping (MoviesResponse)->(), fail: @escaping (ApiError)->()) {
+        self.request(endpoint: .upcomingMovies, success: { (response) in
+			if let movies = MoviesResponse(json: response) {
+				success(movies)
+			} else {
+				fail(.parserError)
+			}
         }) { (error) in
             print(error)
         }
