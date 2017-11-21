@@ -101,12 +101,16 @@ extension API {
         }
     }
     
-    public static func movie(id: String,
-                             success: @escaping ([String : Any])->(),
+    public static func movie(id: Int,
+                             success: @escaping (MovieDetailResponse)->(),
                              fail: @escaping (ApiError)->()) {
         
-        self.request(endpoint: .movie(id: id), success: { (movie) in
-            
+        self.request(endpoint: .movie(id: id), success: { (response) in
+            if let movieDetail = MovieDetailResponse(json: response) {
+                success(movieDetail)
+            } else {
+                fail(.parserError)
+            }
         }) { (error) in
             print(error)
         }

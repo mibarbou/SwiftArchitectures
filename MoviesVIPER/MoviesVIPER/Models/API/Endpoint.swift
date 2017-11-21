@@ -18,7 +18,7 @@ enum Endpoint {
     case nowPlayingMovies
     case topRatedMovies
     case upcomingMovies
-    case movie(id: String)
+    case movie(id: Int)
     case movieImages(id: String)
     case movieVideos(id: String)
     case similarMovies(id: String)
@@ -52,7 +52,7 @@ extension Endpoint {
         case .upcomingMovies:
             return baseURL + "/movie/upcoming"
         case let .movie(id: id):
-            return baseURL + "/movie/" + id
+            return baseURL + "/movie/" + String(id)
         case let .movieImages(id: id):
             return baseURL + "/movie/" + id + "/images"
         case let .movieVideos(id: id):

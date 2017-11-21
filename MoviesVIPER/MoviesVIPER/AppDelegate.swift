@@ -24,11 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        }
 		
-		API.topRatedMovies(success: { (movies) in
-			print(movies)
-		}) { (error) in
-			
-		}
+//        API.topRatedMovies(success: { (movies) in
+//            print(movies)
+//        }) { (error) in
+//
+//        }
+        
+        API.movie(id: 550, success: { (movieDetail) in
+            print(movieDetail)
+        }) { (error) in
+            
+        }
         
         let testVC = TestViewController()
         let nav = UINavigationController(rootViewController: testVC)
