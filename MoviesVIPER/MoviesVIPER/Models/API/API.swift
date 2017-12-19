@@ -53,10 +53,11 @@ class API {
 
 extension API {
     
-    public static func popularMovies(success: @escaping (MoviesResponse)->(), fail: @escaping (ApiError)->()) {
+    public static func popularMovies(success: @escaping (MoviesList)->(), fail: @escaping (ApiError)->()) {
         self.request(endpoint: .popularMovies, success: { (response) in
-			if let movies = MoviesResponse(json: response) {
-				success(movies)
+			if let moviesResponse = MoviesResponse(json: response) {
+                let moviesList = MoviesListMapper().map(input: moviesResponse)
+				success(moviesList)
 			} else {
 				fail(.parserError)
 			}
