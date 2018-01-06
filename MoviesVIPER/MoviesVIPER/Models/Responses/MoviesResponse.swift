@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct MoviesResponse: Gloss.Decodable {
+struct MoviesResponse: JSONDecodable {
 	let page:			Int?
 	let totalResults:	Int?
 	let totalPages:		Int?

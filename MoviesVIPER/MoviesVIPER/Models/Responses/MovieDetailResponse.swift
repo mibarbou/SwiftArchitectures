@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct MovieDetailResponse: Gloss.Decodable {
+struct MovieDetailResponse: JSONDecodable {
     let id:                     Int
     let title:                  String
     let adult:                  Bool?
@@ -64,7 +64,7 @@ struct MovieDetailResponse: Gloss.Decodable {
     }
 }
 
-struct CollectionResponse: Gloss.Decodable {
+struct CollectionResponse: JSONDecodable {
     let name:           String
     let id:             Int
     let posterPath:     String?
@@ -81,7 +81,7 @@ struct CollectionResponse: Gloss.Decodable {
 }
 
 
-struct ProductionCompanyResponse: Gloss.Decodable {
+struct ProductionCompanyResponse: JSONDecodable {
     let name:   String
     let id:     Int
     
@@ -93,7 +93,7 @@ struct ProductionCompanyResponse: Gloss.Decodable {
     }
 }
 
-struct ProductionCountryResponse: Gloss.Decodable {
+struct ProductionCountryResponse: JSONDecodable {
     let name:   String
     let isoCode:    String
     
@@ -105,7 +105,7 @@ struct ProductionCountryResponse: Gloss.Decodable {
     }
 }
 
-struct SpokenLanguageResponse: Gloss.Decodable {
+struct SpokenLanguageResponse: JSONDecodable {
     let name:   String
     let isoCode:    String
     
