@@ -18,26 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         // Override point for customization after application launch.
         
-//        API.movieSearch(query: "batman", success: { (_) in
-//
-//        }) { (_) in
-//
-//        }
-		
-        API.popularMovies(success: { (moviesList) in
-            print(moviesList)
-        }) { (error) in
-
-        }
-        
-//        API.movie(id: 550, success: { (movieDetail) in
-//            print(movieDetail)
-//        }) { (error) in
-//
-//        }
-        
-        let testVC = TestViewController()
-        let nav = UINavigationController(rootViewController: testVC)
+        let homeVC = HomeViewController()
+        let nav = UINavigationController(rootViewController: homeVC)
         
         self.window?.rootViewController = nav
         

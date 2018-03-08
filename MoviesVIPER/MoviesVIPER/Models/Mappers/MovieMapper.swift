@@ -13,7 +13,9 @@ struct MovieMapper: Mapper {
     typealias OUT = Movie
     
     func map(input: MovieResponse) -> Movie {
-        return Movie(id: input.id,
-                     title: input.title)
+        let movie = Movie()
+        movie.id = String(input.id)
+        movie.title = input.title
+        return movie
     }
 }

@@ -6,6 +6,7 @@ target 'MoviesVIPER' do
 
 	pod 'Alamofire'
     pod 'Gloss'
+    pod 'RealmSwift'
 
   target 'MoviesVIPERTests' do
     inherit! :search_paths
