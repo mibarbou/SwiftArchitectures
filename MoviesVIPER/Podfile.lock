@@ -1,23 +1,34 @@
 PODS:
-  - Alamofire (4.7.0)
-  - Gloss (2.0.0)
-  - Realm (3.1.0):
-    - Realm/Headers (= 3.1.0)
-  - Realm/Headers (3.1.0)
-  - RealmSwift (3.1.0):
-    - Realm (= 3.1.0)
+  - Alamofire (4.7.3)
+  - Gloss (2.0.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
+  - SwiftyVIPER (1.2.3)
 
 DEPENDENCIES:
   - Alamofire
   - Gloss
   - RealmSwift
+  - SwiftyVIPER
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Gloss
+    - Realm
+    - RealmSwift
+    - SwiftyVIPER
 
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
-  Gloss: b67617f327406adfd47adf20172d00680a3a31bd
-  Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
-  RealmSwift: e868fee9b10e5490ad94b6b6ecd9027944da1824
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Gloss: 1e8743f8de1fbe14a97f220ff901cba91ae5f8f8
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  SwiftyVIPER: 83afd74104ea27303ec6a52563f4adbf33413e50
 
-PODFILE CHECKSUM: 008a7a8482ec1e51bf05955df2110b53aec038f3
+PODFILE CHECKSUM: 40f2f413b1cac2ca831df65ec15c2e336e09c5d9
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

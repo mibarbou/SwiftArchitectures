@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVIPER
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         // Override point for customization after application launch.
         
-        let homeVC = HomeViewController()
-        let nav = UINavigationController(rootViewController: homeVC)
+        let moviesListVC = MoviesListModule().view
+        let nav = UINavigationController(rootViewController: moviesListVC)
         
         self.window?.rootViewController = nav
         
