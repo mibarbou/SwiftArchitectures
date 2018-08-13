@@ -57,6 +57,11 @@ extension MoviesListViewController {
         cell.titleLabel?.text = presenter.movie(at: indexPath).title
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = presenter.movie(at: indexPath)
+        presenter.goToMovieDetail(movie)
+    }
 }
 
 extension MoviesListViewController: MoviesListPresenterViewProtocol {
@@ -68,3 +73,15 @@ extension MoviesListViewController: MoviesListPresenterViewProtocol {
         self.title = title
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

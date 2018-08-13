@@ -16,10 +16,16 @@ protocol MovieDetailPresenterInteractorProtocol {
 }
 
 final class MovieDetailInteractor: MovieDetailPresenterInteractorProtocol {
+    
+    let movie: Movie
 
 	weak var presenter: MovieDetailInteractorPresenterProtocol?
+    
+    init(movie: Movie) {
+        self.movie = movie
+    }
 
 	func requestTitle() {
-		presenter?.set(title: "MovieDetail")
+		presenter?.set(title: movie.title)
 	}
 }

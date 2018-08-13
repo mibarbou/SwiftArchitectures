@@ -14,12 +14,12 @@ import SwiftyVIPER
 protocol MoviesListViewPresenterProtocol: ViewPresenterProtocol {
     func moviesCount() -> Int
     func movie(at index: IndexPath) -> Movie
+    func goToMovieDetail(_ movie: Movie)
 }
 
 protocol MoviesListInteractorPresenterProtocol: class {
 	func set(title: String?)
     func load(movies: [Movie])
-    func reloadData()
 }
 
 
@@ -52,6 +52,10 @@ extension MoviesListPresenter: MoviesListViewPresenterProtocol {
     func moviesCount() -> Int {
         return movies.count
     }
+    
+    func goToMovieDetail(_ movie: Movie) {
+        router.goToMovieDetail(movie)
+    }
 
 }
 
@@ -59,11 +63,9 @@ extension MoviesListPresenter: MoviesListInteractorPresenterProtocol {
     
     func load(movies: [Movie]) {
         self.movies = movies
-    }
-    
-    func reloadData() {
         view?.reload()
     }
+
 
     
     func set(title: String?) {

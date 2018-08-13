@@ -12,9 +12,11 @@ import SwiftyVIPER
 import UIKit
 
 final class MovieDetailModule: ModuleProtocol {
+    
+    let movie: Movie
 
 	private(set) lazy var interactor: MovieDetailInteractor = {
-		MovieDetailInteractor()
+		MovieDetailInteractor(movie: self.movie)
 	}()
 
 	private(set) lazy var router: MovieDetailRouter = {
@@ -33,7 +35,8 @@ final class MovieDetailModule: ModuleProtocol {
 		return view
 	}
 
-	init() {
+    init(movie: Movie) {
+        self.movie = movie
 		presenter.view = view
 		router.viewController = view
 		interactor.presenter = presenter

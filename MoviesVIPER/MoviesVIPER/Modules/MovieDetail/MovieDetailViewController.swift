@@ -16,7 +16,7 @@ protocol MovieDetailPresenterViewProtocol: class {
 }
 
 class MovieDetailViewController: UIViewController {
-
+    
 	let presenter: MovieDetailViewPresenterProtocol
 
 	init(presenter: MovieDetailViewPresenterProtocol) {

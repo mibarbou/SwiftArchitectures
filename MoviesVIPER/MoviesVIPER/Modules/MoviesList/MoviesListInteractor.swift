@@ -31,11 +31,10 @@ final class MoviesListInteractor: MoviesListPresenterInteractorProtocol {
 	}
     
     func fetchMovies() {
-        let movies = service.fetchMovies().toArray(type: Movie.self)
-        self.presenter?.load(movies: movies)
-        service.reloadData {
-            self.presenter?.load(movies: movies)
-            self.presenter?.reloadData()
+        API.popularMovies(success: { (moviesList) in
+            self.presenter?.load(movies: moviesList.movies)
+        }) { (error) in
+            print(error)
         }
     }
 }
